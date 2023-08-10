@@ -2014,6 +2014,8 @@ public class MethodCallHandlerImpl implements MethodCallHandler, StateProvider {
     getUserMediaImpl.reStartCamera(new GetUserMediaImpl.IsCameraEnabled() {
       @Override
       public boolean isEnabled(String id) {
+        Log.d(TAG, "reStartCamera isEnabled id: " + id + " => 0");
+        id = "0";
         if (!localTracks.containsKey(id)) {
           return false;
         }
